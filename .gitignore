@@ -1,0 +1,24 @@
+# Logs
+logs
+*.log
+.DS_Store
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Files generated on build
+bin
+obj
+
+# Config files
+.vscode
+
+# Development databases
+*.db
+dev.sqlite3
+
+# Appsettings
+appsettings.json
