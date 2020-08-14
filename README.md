@@ -17,7 +17,7 @@
 
 ## Server-side details
 
-### GET /values
+### GET /api/values
 
 Response body:
 
@@ -34,7 +34,7 @@ Response body:
 ]
 ```
 
-### GET /values/:id
+### GET /api/values/:id
 
 Response body:
 
