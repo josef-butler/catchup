@@ -3,6 +3,7 @@ import axios from "axios"
 
 import logo from "./logo.svg"
 import "./App.css"
+import 'semantic-ui-css/semantic.min.css'
 
 class App extends React.Component {
   state = {
