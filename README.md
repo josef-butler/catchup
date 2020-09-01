@@ -79,3 +79,19 @@ Response body:
   }
 ]
 ```
+
+#### GET /api/activities/7a32896b-6e65-4686-91cf-03e4265b50d6
+
+Response body:
+
+```JSON
+{
+    "id": "7a32896b-6e65-4686-91cf-03e4265b50d6",
+    "title": "Past Activity 1",
+    "description": "Activity 2 months ago",
+    "category": "drinks",
+    "date": "2020-06-30T20:00:59.1688347",
+    "city": "London",
+    "venue": "Pub"
+}
+```
