@@ -6,18 +6,20 @@
 
 🌱 This personal project is currently a work in progress, and is for me to develop skills specifically in ASP.NET Core, C# and TypeScript. It will:
 
-- Use a Web API in .NET Core with Clean Architecture using the CQRS + Mediator pattern
-- Include Identity and Authentication using .NET Core Identity
-- Use React as the client
-- Use MobX as a state management library
+-   Use a Web API in .NET Core with Clean Architecture using the CQRS + Mediator pattern
+-   Include Identity and Authentication using .NET Core Identity
+-   Use React as the client
+-   Use MobX as a state management library
 
 💾 This README will be updated as the project progresses.
 
 ---
 
-## Server-side details
+## API requests
 
-### GET /api/values
+### Values
+
+#### GET /api/values
 
 Response body:
 
@@ -34,7 +36,7 @@ Response body:
 ]
 ```
 
-### GET /api/values/:id
+#### GET /api/values/:id
 
 Response body:
 
@@ -45,3 +47,35 @@ Response body:
     "name": "Value 101"
   }
 ]
+```
+
+### Activities
+
+#### GET /api/activities
+
+Response body:
+
+```JSON
+[
+  {
+    {
+        "id": "7a32896b-6e65-4686-91cf-03e4265b50d6",
+        "title": "Past Activity 1",
+        "description": "Activity 2 months ago",
+        "category": "drinks",
+        "date": "2020-06-30T20:00:59.1688347",
+        "city": "London",
+        "venue": "Pub"
+    },
+    {
+        "id": "25665981-5ca8-450f-a0d6-942a9828c35d",
+        "title": "Past Activity 2",
+        "description": "Activity 1 month ago",
+        "category": "culture",
+        "date": "2020-07-31T20:00:59.1710618",
+        "city": "Paris",
+        "venue": "Louvre"
+    }
+  }
+]
+```
