@@ -80,7 +80,7 @@ Response body:
 ]
 ```
 
-#### GET /api/activities/7a32896b-6e65-4686-91cf-03e4265b50d6
+#### GET /api/activities/:guid
 
 Response body:
 
@@ -94,4 +94,26 @@ Response body:
     "city": "London",
     "venue": "Pub"
 }
+```
+
+#### POST /api/activities
+
+Request body:
+
+```JSON
+{
+	"id": "{{guid}}",
+	"title": "Test Create Activity",
+	"description": "Description of the test event",
+	"category": "Culture",
+	"date": "{{activityDate}}",
+	"city": "Wellington",
+	"venue": "Waterfront"
+}
+```
+
+Response body:
+
+```JSON
+{}
 ```
