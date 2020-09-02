@@ -113,3 +113,25 @@ Response body:
 ```JSON
 {}
 ```
+
+#### PUT /api/activities/:guid
+
+Request body (can contain some or all properties updated)
+
+```JSON
+{
+	"id": "{{guid}}",
+	"title": "Test Create Activity",
+	"description": "Description of the test event",
+	"category": "Culture",
+	"date": "{{activityDate}}",
+	"city": "Wellington",
+  "venue": "Waterfront"
+}
+```
+
+Response body:
+
+```JSON
+{}
+```

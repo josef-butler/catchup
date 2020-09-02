@@ -30,6 +30,7 @@ namespace Application.Activities
 
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
             {
+                // Create the new activity object
                 var activity = new Activity
                 {
                     Id = request.Id,
@@ -41,12 +42,13 @@ namespace Application.Activities
                     Venue = request.Venue
                 };
 
+                // Add the activity to the db
                 _context.Activities.Add(activity);
 
-                // Creates a success variable if the number of changes made to the db is more than 0. If 0, it means the request to add an Activity failed
+                // Create success variable if anything was created
                 var success = await _context.SaveChangesAsync() > 0;
 
-                // Return the success variable if it was successful. This allows the server to send a 200 OK response
+                // If created, pass the success variable back so the API can return a 200
                 if (success) return Unit.Value;
 
                 // If unsuccessful, throw an exception
