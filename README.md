@@ -120,7 +120,6 @@ Request body (can contain some or all properties updated)
 
 ```JSON
 {
-	"id": "{{guid}}",
 	"title": "Test Create Activity",
 	"description": "Description of the test event",
 	"category": "Culture",
