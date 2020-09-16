@@ -135,3 +135,11 @@ Response body:
 ```JSON
 {}
 ```
+
+#### DELETE /api/activities/:guid
+
+Response body:
+
+```JSON
+{}
+```
