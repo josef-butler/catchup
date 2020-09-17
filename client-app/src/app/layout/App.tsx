@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 
-import './App.css'
 import 'semantic-ui-css/semantic.min.css'
 
 import { Header, Icon } from 'semantic-ui-react'
