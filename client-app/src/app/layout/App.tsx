@@ -1,20 +1,22 @@
 import React from 'react'
 import axios from 'axios'
-
 import 'semantic-ui-css/semantic.min.css'
-
 import { Header, Icon } from 'semantic-ui-react'
+import { IActivity } from '../models/activity'
 
-class App extends React.Component {
-  state = {
-    values: [],
+interface IState {
+  activities: IActivity[]
+}
+
+class App extends React.Component<{}, IState> {
+  readonly state: IState = {
+    activities: [],
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/api/values/').then(response => {
-      console.log(response)
+    axios.get<IActivity[]>('http://localhost:5000/api/activities/').then(response => {
       this.setState({
-        values: response.data,
+        activities: response.data,
       })
     })
   }
@@ -27,8 +29,8 @@ class App extends React.Component {
           <Header.Content>CatchUp</Header.Content>
         </Header>
         <ul>
-          {this.state.values.map((value: any) => (
-            <li key={value.id}>{value.name}</li>
+          {this.state.activities.map((activity) => (
+            <li key={activity.id}>{activity.title}</li>
           ))}
         </ul>
       </div>
