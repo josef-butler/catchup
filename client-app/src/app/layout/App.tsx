@@ -40,6 +40,10 @@ const App = () => {
 
     const handleDeleteActivity = (id: string) => {
         setActivities([...activities.filter(a => a.id !== id)])
+        if (selectedActivity && selectedActivity.id === id) {
+            setSelectedActivity(null)
+            setEditMode(false)
+        }
     }
 
     useEffect(() => {
