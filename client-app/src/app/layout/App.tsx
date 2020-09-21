@@ -12,10 +12,14 @@ const App = () => {
         null
     )
     const [editMode, setEditMode] = useState(false)
-    
 
     const handleSelectActivity = (id: string) => {
         setSelectedActivity(activities.filter(a => a.id === id)[0])
+    }
+
+    const handleOpenCreateForm = () => {
+        setSelectedActivity(null)
+        setEditMode(true)
     }
 
     useEffect(() => {
@@ -28,7 +32,7 @@ const App = () => {
 
     return (
         <>
-            <NavBar />
+            <NavBar openCreateForm={handleOpenCreateForm} />
             <Container style={{ marginTop: '7em' }}>
                 <ActivityDashboard
                     activities={activities}
@@ -36,6 +40,7 @@ const App = () => {
                     selectedActivity={selectedActivity}
                     editMode={editMode}
                     setEditMode={setEditMode}
+                    setSelectedActivity={setSelectedActivity}
                 />
             </Container>
         </>
