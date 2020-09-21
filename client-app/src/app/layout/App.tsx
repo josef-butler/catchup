@@ -4,6 +4,7 @@ import 'semantic-ui-css/semantic.min.css'
 import { IActivity } from '../models/activity'
 import { NavBar } from '../../features/nav/NavBar'
 import { Container } from 'semantic-ui-react'
+import { ActivityDashboard } from '../../features/activities/dashboard/ActivityDashboard'
 
 const App = () => {
   const [activities, setActivities] = useState<IActivity[]>([])
@@ -20,11 +21,7 @@ const App = () => {
     <>
       <NavBar />
       <Container style={{marginTop: '7em'}}>
-        <ul>
-          {activities.map(activity => (
-            <li key={activity.id}>{activity.title}</li>
-          ))}
-        </ul>
+        <ActivityDashboard activities={activities}/>
       </Container>
     </>
   )
